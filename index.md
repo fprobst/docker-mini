@@ -9,26 +9,26 @@ Erstellt das Docker Image auf Basis von node:7
 
 ## Docker Images anzeigen
 
-docker images
+`docker images`
 
 ## Docker Container starten
 
-docker run --name docker-mini-container -p 8080:8080 -d docker-mini
+`docker run --name docker-mini-container -p 8080:8080 -d docker-mini`
 
 ## Laufende Container anzeigen
 
-docker ps
+`docker ps`
 
 ## Details über den Container
 
-docker inspect docker-mini-container
+`docker inspect docker-mini-container`
 
 ## Container Shell
 
-docker exec -it docker-mini-container bash
+`docker exec -it docker-mini-container bash`
 
 ## Container anhalten und beenden
 
-docker stop docker-mini-container
+`docker stop docker-mini-container`
 
-docker rm docker-mini-container
+`docker rm docker-mini-container'
