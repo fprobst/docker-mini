@@ -31,4 +31,4 @@ Erstellt das Docker Image auf Basis von node:7
 
 `docker stop docker-mini-container`
 
-`docker rm docker-mini-container'
+`docker rm docker-mini-container`
