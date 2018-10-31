@@ -1,7 +1,7 @@
 
 # Docker Mini
 
-## Docker Hup
+## Docker Hub
 
 https://hub.docker.com/r/probstl/docker-mini/
 
