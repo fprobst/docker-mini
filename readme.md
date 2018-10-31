@@ -1,6 +1,12 @@
 
 # Docker Mini
 
+## Docker Hup
+
+https://hub.docker.com/r/probstl/docker-mini/
+
+`docker pull probstl/docker-mini`
+
 ## Docker Image erstellen
 
 Erstellt das Docker Image auf Basis von node:7
