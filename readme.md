@@ -1,6 +1,8 @@
 
 # Docker Mini
 
+Änderung nur für Slack.
+
 ## Docker Hub
 
 https://hub.docker.com/r/probstl/docker-mini/
