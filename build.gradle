@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		springBootVersion	= "1.5.2.RELEASE"
+		springBootVersion	= "2.0.5.RELEASE"
 		gradleDockerVersion	= "1.2"
 	}
 	repositories {
@@ -17,6 +17,7 @@ apply plugin: "application"
 apply plugin: "eclipse"
 apply plugin: "docker"
 apply plugin: "org.springframework.boot"
+apply plugin: "io.spring.dependency-management"
 
 compileJava {
 	sourceCompatibility	= 1.8
@@ -33,8 +34,27 @@ jar {
 	}
 }
 
+/*
+
+Docker Image bauen lassen:
+gradle build distDocker --refresh-dependencies
+
+Docker Image prüfen:
+docker images
+
+Docker Container hochfahren:
+docker run --name docker-mini-container -p 8080:8080 -d docker-mini
+
+Docker Logs für den Container anzeigen
+docker logs docker-mini-container
+
+Shell im Container öffnen
+docker exec -it docker-mini-container /bin/sh
+
+*/
+
 docker {
-	baseImage "openjdk/8u181-alpine"
+	baseImage "openjdk:8u181-alpine"
 	maintainer 'Florian Probst "flo@probstl.de"'
 }
 
