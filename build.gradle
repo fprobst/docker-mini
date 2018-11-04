@@ -1,0 +1,48 @@
+buildscript {
+	ext {
+		springBootVersion	= "1.5.2.RELEASE"
+		gradleDockerVersion	= "1.2"
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath("se.transmode.gradle:gradle-docker:${gradleDockerVersion}")
+	}
+}
+
+apply plugin: "java"
+apply plugin: "application"
+apply plugin: "eclipse"
+apply plugin: "docker"
+apply plugin: "org.springframework.boot"
+
+compileJava {
+	sourceCompatibility	= 1.8
+	targetCompatibility 	= 1.8
+	mainClassName		= "de.probstl.docker.MicroApp"
+}
+
+jar {
+	baseName	= "microservice"
+	group		= "de.probstl"
+	version		= "1.0.0-SNAPSHOT"
+	manifest {
+		attributes "Main-Class": "de.probstl.docker.MicroApp"
+	}
+}
+
+docker {
+	baseImage "openjdk/8u181-alpine"
+	maintainer 'Florian Probst "flo@probstl.de"'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile("org.springframework.boot:spring-boot-starter-web")
+	testCompile("org.springframework.boot:spring-boot-starter-test")
+}
