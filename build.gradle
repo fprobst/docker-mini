@@ -20,7 +20,7 @@ apply plugin: "org.springframework.boot"
 
 compileJava {
 	sourceCompatibility	= 1.8
-	targetCompatibility 	= 1.8
+	targetCompatibility = 1.8
 	mainClassName		= "de.probstl.docker.MicroApp"
 }
 
